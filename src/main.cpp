@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <stdlib.h>
 
 int main(int argc, char* argv[])
 {
@@ -14,5 +15,10 @@ int main(int argc, char* argv[])
 
 	std::ofstream o {"Makefile"};
 	o << mfile;
+	o.close();
+
+	system("mkdir src");
+	system("mkdir builds");
+
 	return 0;
 }
